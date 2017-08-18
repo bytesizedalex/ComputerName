@@ -11,13 +11,13 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="ComputerName" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" Text="Computer Name" VerticalAlignment="Top"/>
+        <TextBlock x:Name="ComputerName" ToolTip="Computer hostname" HorizontalAlignment="Left" Margin="10,21,0,0" TextWrapping="Wrap" Text="Computer Name" VerticalAlignment="Top"/>
         <TextBox x:Name="MachineName" HorizontalAlignment="Left" Height="23" Margin="127,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Initialized="MachineName_Initialized" IsReadOnly="True"/>
-        <TextBlock x:Name="DomainName" HorizontalAlignment="Left" Margin="10,71,0,0" TextWrapping="NoWrap" Text="Domain Name" VerticalAlignment="Top"/>
+        <TextBlock x:Name="DomainName" ToolTip="Active Directory domain name" HorizontalAlignment="Left" Margin="10,71,0,0" TextWrapping="NoWrap" Text="Domain Name" VerticalAlignment="Top"/>
         <TextBox x:Name="Domain" HorizontalAlignment="Left" Height="23" Margin="127,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Initialized="Domain_Initialized" IsReadOnly="True"/>
-        <TextBlock x:Name="IPAddresses" HorizontalAlignment="Left" Margin="10,120,0,0" TextWrapping="Wrap" Text="IP Addresses" VerticalAlignment="Top"/>
+        <TextBlock x:Name="IPAddresses" ToolTip="List of IP addresses" HorizontalAlignment="Left" Margin="10,120,0,0" TextWrapping="Wrap" Text="IP Addresses" VerticalAlignment="Top"/>
         <ListBox x:Name="IPs" HorizontalAlignment="Left" Height="84" Margin="127,120,0,0" VerticalAlignment="Top" Width="120" Initialized="IPs_Initialized"/>
         <Button x:Name="Copy" Content="Copy" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" Width="74" ToolTip="Click to copy details" Click="Copy_Click" RenderTransformOrigin="0.5,1.5"/>
-        <Ellipse x:Name="StatusIndicator" HorizontalAlignment="Left" Height="18" Margin="267,202,0,0" Stroke="Black" VerticalAlignment="Top" Width="20" Initialized="StatusIndicator_Initialized" RenderTransformOrigin="-0.15,-0.333" StrokeThickness="0"/>
+        <Ellipse x:Name="StatusIndicator" ToolTip="Connection status indicator" HorizontalAlignment="Left" Height="18" Margin="267,202,0,0" Stroke="Black" VerticalAlignment="Top" Width="20" Initialized="StatusIndicator_Initialized" RenderTransformOrigin="-0.15,-0.333" StrokeThickness="0"/>
     </Grid>
 </Window>
