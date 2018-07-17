@@ -22,14 +22,14 @@ Example with successful connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Success.png "Example with successful connection")
 
-Hostname: AB
-Domain Name: AB
-Internet Connection Status: Successful
-Internal Domain Connection Status: Successful
-Windows 10 Release: 1803
-IP Address: 10.16.33.21
-IP Address: 172.23.99.17
-IP Address: 192.168.3.28
+Hostname: AB\s\s
+Domain Name: AB\s\s
+Internet Connection Status: Successful\s\s
+Internal Domain Connection Status: Successful\s\s
+Windows 10 Release: 1803\s\s
+IP Address: 10.16.33.21\s\s
+IP Address: 172.23.99.17\s\s
+IP Address: 192.168.3.28\s\s
 
 Example of mixed status connection:
 
