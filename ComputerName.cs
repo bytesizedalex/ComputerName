@@ -2,33 +2,43 @@ using System.Windows;
 using System.Net;
 using System.Linq;
 
-namespace ComputerName
+namespace PCName
 {
     public partial class MainWindow : Window
     {
         IPAddress[] addresses;
-        string connectionStatus;
-
+        string internetConnectionStatus = "Failed";
+        string internalConnectionStatus = "Failed"; /* This variable is used for the internal company resource URL */
         public MainWindow()
         {
             InitializeComponent();
         }
+
         private void StatusIndicator_Initialized(object sender, System.EventArgs e)
         {
+
+            StatusIndicator.Fill = System.Windows.Media.Brushes.Red;
+
             try
             {
                 using (var client = new WebClient())
-                using (var stream = client.OpenRead("https://www.google.com")) /// Enter the URL you wish to check for connectivity. In this instance Google is used as an example
+                using (var stream = client.OpenRead("https://www.google.co.uk"))
                 {
-                    StatusIndicator.Fill = System.Windows.Media.Brushes.Green;
-                    connectionStatus = "Connection Successful";
+                    StatusIndicator.Fill = System.Windows.Media.Brushes.Orange;
+                    internetConnectionStatus = "Successful";
                 }
             }
-            catch
+            catch { }
+            try
             {
-                StatusIndicator.Fill = System.Windows.Media.Brushes.Red;
-                connectionStatus = "Connection Not Successful";
+                using (var client = new WebClient())
+                using (var stream = client.OpenRead("http://mytesturl.mydomain.com/")) /* Use an internal company URL resource to test domain connectivity */
+                {
+                    StatusIndicator.Fill = System.Windows.Media.Brushes.Green;
+                    internalConnectionStatus = "Successful";
+                }
             }
+            catch { }
         }
 
         private void MachineName_Initialized(object sender, System.EventArgs e)
@@ -50,16 +60,22 @@ namespace ComputerName
                 IPs.Items.Add(address);
             }
         }
+
         private void Copy_Click(object sender, RoutedEventArgs e)
         {
-            string copiedDetails = MachineName.Text + "\r\n" + Domain.Text + "\r\n" + connectionStatus + "\r\n";
+            string releaseId = Microsoft.Win32.Registry.GetValue(@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion", "ReleaseId", "").ToString();
+            string copiedDetails = "Hostname: " + MachineName.Text + "\r\n" + "Domain Name: " + Domain.Text + "\r\n" + "Internet Connection Status: " + internetConnectionStatus + "\r\n" + "Internal Domain Connection Status: " + internalConnectionStatus + "\r\n" + "Windows 10 Release: " + releaseId + "\r\n";
 
             foreach (var ipAddress in addresses)
             {
-                copiedDetails += ipAddress.ToString() + "\r\n";
+                copiedDetails += "IP Address: " + ipAddress.ToString() + "\r\n";
             }
 
-            Clipboard.SetText(copiedDetails);
+            try
+            {
+                Clipboard.SetText(copiedDetails);
+            }
+            catch { }
         }
     }
 }
