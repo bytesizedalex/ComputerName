@@ -21,6 +21,7 @@ The connection status indicator has the following possible colours:
 Example with successful connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Success.png "Example with successful connection")
+
 Hostname: AB
 Domain Name: AB
 Internet Connection Status: Successful
@@ -33,6 +34,7 @@ IP Address: 192.168.3.28
 Example of mixed status connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Partial.png "Example with mixed status connection")
+
 Hostname: AB
 Domain Name: AB
 Internet Connection Status: Successful
@@ -44,6 +46,7 @@ IP Address: 192.168.3.28
 Example with failed connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Failed.png "Example with failed connection")
+
 Hostname: AB
 Domain Name: AB
 Internet Connection Status: Failed
