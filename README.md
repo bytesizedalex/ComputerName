@@ -18,7 +18,7 @@ The connection status indicator has the following possible colours:
 * Red - All connections failed, no network connectivity detected
 
 # Examples
-Example with successful connection:
+* Example with successful connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Success.png "Example with successful connection")
 
@@ -31,7 +31,7 @@ IP Address: 10.16.33.21
 IP Address: 172.23.99.17  
 IP Address: 192.168.3.28  
 
-Example of mixed status connection:
+* Example of mixed status connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Partial.png "Example with mixed status connection")
 
@@ -43,7 +43,7 @@ Windows 10 Release: 1803
 IP Address: 172.23.99.17  
 IP Address: 192.168.3.28  
 
-Example with failed connection:
+* Example with failed connection:
 
 ![alt text](https://raw.githubusercontent.com/bytesizedalex/ComputerName/master/Example%20Screenshots/Failed.png "Example with failed connection")
 
